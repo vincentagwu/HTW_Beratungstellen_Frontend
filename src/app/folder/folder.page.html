@@ -14,8 +14,129 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-item fill="outline">
+          <ion-label position="floating">Geben Sie Ihre Frage ein</ion-label>
+          <ion-input type="text" [(ngModel)]="question" (ionChange)="userInput()"></ion-input>
+        </ion-item>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ion-button align="center"  (click)="insertQuestion(question)">Antwort erhalten</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="buttonClicked">
+      <ion-col>
+        <b>
+          <ion-label>
+            Ergebnis auf die Frage:
+          </ion-label>
+          <br>
+          <ion-label>{{sendedQuestion}}</ion-label>
+        </b>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        
+        <!-- <ion-list *ngFor="let answer of questions.answers">
+          
+          <ion-item *ngFor="let item of answer">
+            <ion-grid>
+              <ion-row>
+                <ion-col class="ion-text-center">
+                  <ion-label>
+                    {{item.label}}
+                  </ion-label>
+                </ion-col>
+                <ion-col class="ion-text-center">
+                  <ion-label>
+                    {{item.score}}
+                  </ion-label>
+                  </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-list> -->
+        <div *ngIf="input == false && this.question.length > 0">
+          <ion-accordion-group *ngFor="let answer of questions.answers">
+            <ion-accordion *ngFor="let item of answer">
+              <ion-item slot="header">
+                <ion-label>{{item.label}}</ion-label>
+              </ion-item>
+          
+              <ion-list slot="content">
+                <!-- <ion-item>
+                  <ion-label> {{item.score}}</ion-label>
+                </ion-item> -->
+                <ion-card>
+                  <ion-card-header>
+                    <ion-card-subtitle>
+                      <ion-label>{{item.label}}</ion-label>
+                    </ion-card-subtitle>
+                    <ion-card-title>
+                      <ion-label>{{item.label}}</ion-label>
+                    </ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content>
+                    <ion-label> {{item.score}}</ion-label>
+                  </ion-card-content>
+                </ion-card>
+              </ion-list>
+            </ion-accordion>
+          </ion-accordion-group>
+        </div>
+
+        <div *ngIf="input == true && this.question.length > 0">
+          <ion-accordion-group *ngFor="let answer of [].constructor(12)">
+            <ion-accordion >
+              <ion-item slot="header">
+                <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+              </ion-item>
+          
+              <ion-list slot="content">
+                <!-- <ion-item>
+                  <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                </ion-item> -->
+                <ion-card>
+                  <ion-card-header>
+                    <ion-card-subtitle>
+                      <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+                    </ion-card-subtitle>
+                    <ion-card-title>
+                      <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                    </ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content>
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                    <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+                  </ion-card-content>
+                </ion-card>
+              </ion-list>
+            </ion-accordion>
+          </ion-accordion-group>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+  
+  <!-- <div id="container">
+     <strong class="capitalize">{{ folder }}</strong>
     <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-list >
+      <ion-item *ngFor="let item of questions.answers[0]">
+        <ion-label>
+          {{item.label}}
+        </ion-label>
+      </ion-item>
+  
+    </ion-list>
+   
+  </div> -->
 </ion-content>
