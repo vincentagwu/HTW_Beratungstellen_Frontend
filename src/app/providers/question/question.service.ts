@@ -12,6 +12,6 @@ export class QuestionService {
   }
 
   public getAnswer(question) {
-    return this.http.get<String[]>(this.apiUrl + 'question?q=Ich%20bin%20schwanger,%20was%20soll%20ich%20tun?');
+    return this.http.get<String[]>(this.apiUrl+'/question?q="' + question +'"');
   }
 }

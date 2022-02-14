@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core'; 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -16,5 +17,29 @@ export class AppComponent {
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
   picture:String = '../assets/png/logo.png';
-  constructor() {}
+  defaultLanguage = "./../assets/i18n/de.json";
+  language: string = this.defaultLanguage;
+  constructor(private translateService: TranslateService) {
+    this.initializeApp();
+  }
+
+  
+  initializeApp() {
+    this.language = localStorage.getItem("language");
+
+    if(this.language == null)
+      localStorage.setItem("language", "de");
+
+    this.language = localStorage.getItem("language");
+    this.translateService.setDefaultLang(this.language);
+    
+  }
+
+  
+
+
+  languageChange(language) {  // add this
+    this.translateService.use(language);  // add this
+    localStorage.setItem("language", language);
+  }
 }

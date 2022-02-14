@@ -1,5 +1,11 @@
 {
   "name": "api-test",
   "integrations": {},
-  "type": "angular"
+  "type": "angular",
+  "proxies": [
+    {
+      "path": "/newRatings",
+      "proxyUrl": "http://127.0.0.1:5000"
+    }
+  ]
 }
