@@ -1,0 +1,12 @@
+{
+    "rating": {
+        "title": "Submit rating",
+        "heading": "Were you satisfied with the proposals?"
+    },
+    "folder": {
+        "title": "HTW-Saar advice centers",
+        "question": "Enter your question",
+        "answer": "Receive answer",
+        "rating": "Submit Rating"
+    }
+}

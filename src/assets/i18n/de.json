@@ -1,0 +1,12 @@
+{
+    "rating": {
+        "title": "Bewertung abgeben",
+        "heading": "Waren Sie mit den Vorschlägen zufrieden?"
+    },
+    "folder": {
+        "title": "HTW-Saar Beratungsstellen",
+        "question": "Geben Sie Ihre Frage ein",
+        "answer": "Antwort erhalten",
+        "rating": "Bewertung abgeben"
+    }
+}

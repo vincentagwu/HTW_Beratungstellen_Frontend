@@ -5,7 +5,7 @@
         <ion-icon name="close" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>rating</ion-title>
+    <ion-title align="center">{{ 'rating.title' | translate }}</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="send()">
         <ion-icon name="checkmark" slot="icon-only"></ion-icon>
@@ -15,9 +15,9 @@
 </ion-header>
 
 <ion-content>
-  <h6 align="center">Waren Sie mit den Vorschlägen zufrieden?</h6>
+  <h6 align="center">{{ 'rating.heading' | translate }}</h6>
   <div class="row">
-    <div class="col-sm-12">
+    <div  align="center" class="col-sm-12">
         <ul class="list-inline rating-list" *ngFor="let star of stars; let i= index" style="display: inline-block"> 
             <li (click)="countStar(star)" id="{{'starId'+i}}" [ngClass]="{'selected': (star <= selectedValue)}" 
              (mouseover)="addClass(star)" (mouseout)="removeClass(star)"> ★

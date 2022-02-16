@@ -3,12 +3,12 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-title>{{ 'folder.title' | translate }}</ion-title>
 
     <ion-buttons slot="end">
-      <ion-button *ngIf="question != '' && rateDone == false" (click)="rateQuestion(question)">
+      <!-- <ion-button *ngIf="question != '' && rateDone == false" (click)="rateQuestion(question)">
         Bewertung abgeben
-      </ion-button>
+      </ion-button> -->
      <ion-button *ngIf="language == 'en'">
       <img width="100%" height="100%" src="/assets/icon/ger.png" (click)="switchLanguage('de')">
      </ion-button>
@@ -23,7 +23,7 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
+      <ion-title size="large">{{ 'folder.title' | translate }}</ion-title>
     </ion-toolbar>
   </ion-header> 
   
@@ -31,17 +31,17 @@
     <ion-row>
       <ion-col class="ion-text-center">
         <ion-item fill="outline">
-          <ion-label position="floating">Geben Sie Ihre Frage ein</ion-label>
+          <ion-label position="floating">{{ 'folder.question' | translate }}</ion-label>
           <ion-input type="text" [(ngModel)]="question" (ionChange)="userInput()"></ion-input>
         </ion-item>
         </ion-col>
     </ion-row>
     <ion-row>
       <ion-col class="ion-text-center">
-        <ion-button align="center"  (click)="insertQuestion(question)">Antwort erhalten</ion-button>
+        <ion-button align="center"  (click)="insertQuestion(question)">{{ 'folder.answer' | translate }}</ion-button>
       </ion-col>
     </ion-row>
-    <ion-row *ngIf="buttonClicked">
+    <!-- <ion-row *ngIf="buttonClicked">
       <ion-col>
         <b>
           <ion-label>
@@ -51,7 +51,7 @@
           <ion-label>{{sendedQuestion}}</ion-label>
         </b>
       </ion-col>
-    </ion-row>
+    </ion-row> -->
     <ion-row>
       <ion-col class="ion-text-center">
         <div *ngIf="input == false && this.question.length > 0">
@@ -116,5 +116,9 @@
       </ion-col>
     </ion-row>
   </ion-grid>
- 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button  *ngIf="question != '' && rateDone == false" (click)="rateQuestion(question)" >
+      <ion-fab-button><ion-icon name="star-half"></ion-icon></ion-fab-button>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

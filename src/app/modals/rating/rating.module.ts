@@ -7,13 +7,28 @@ import { IonicModule } from '@ionic/angular';
 import { RatingPageRoutingModule } from './rating-routing.module';
 
 import { RatingPage } from './rating.page';
+import {  HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, "./../assets/i18n/", ".json");
+}
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RatingPageRoutingModule
+    RatingPageRoutingModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
   declarations: [RatingPage]
 })

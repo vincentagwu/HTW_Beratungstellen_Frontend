@@ -5,7 +5,7 @@ import {AppComponent} from '../app.component'
 import { environment } from './../../environments/environment';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { RatingPage } from '../modals/rating/rating.page';
-import { ModalController } from '@ionic/angular';
+import { ModalController, AlertController } from '@ionic/angular';
 
 class Rating {
   question: String; 
@@ -33,7 +33,7 @@ export class FolderPage implements OnInit {
   
 
   constructor(private activatedRoute: ActivatedRoute, private questionService: QuestionService, private app: AppComponent, 
-    public http: HttpClient, private modalCtrl: ModalController) { }
+    public http: HttpClient, private modalCtrl: ModalController, private alertCtrl: AlertController) { }
 
   ngOnInit() {
     this.folder = this.app.appPages[0].title;
@@ -126,7 +126,15 @@ export class FolderPage implements OnInit {
         headers.append("Access-Control-Allow-Methods", 'GET, POST, PATCH, PUT, DELETE, OPTIONS');
         //headers.append('Access-Control-Allow-Headers', 'application/json' );
         const requestOptions = new HttpResponse({ headers: headers });
-        var data = { question:  this.question, result: JSON.stringify(this.result), rating: result.data.rating};
+
+        let i = 1 ;
+        let output = "";
+        this.result.answers[0].forEach(element => {
+          output += i + ": " +  element.label + ",\n"
+          i++;
+        });
+
+        var data = { question:  this.question, result: output, rating: result.data.rating};
 
         this.rating = new Rating();
 
@@ -134,19 +142,29 @@ export class FolderPage implements OnInit {
         this.rating.result = this.result;
         this.rating.rating = result.data.rating;
 
+
+
         console.log(data);
+        this.presentAlert('Danke fürs bewerten', 'Bewertung abgegeben', 'Danke, dass Sie ihre Bewertung abgegeben haben!');
         return new Promise((resolve, reject) => {
-          this.http.post(this.apiUrl + 'newRating', [{ question:  this.question, result: JSON.stringify(this.result), rating: result.data.rating}], requestOptions)
+          this.http.post(this.apiUrl + 'newRating', [{ question:  this.question, result: output, rating: result.data.rating}], requestOptions)
           .subscribe((response: any) => {
             resolve(response);
           });
         });
       }
     });
+  }
 
+  async presentAlert(header:string, subHeader:string, message:string ) {
+    const alert = await this.alertCtrl.create({
+      cssClass: 'my-custom-class',
+      header: header,
+      subHeader: subHeader,
+      message: message,
+      buttons: ['OK']
+    });
 
-
-
-    
+    await alert.present();
   }
 }
