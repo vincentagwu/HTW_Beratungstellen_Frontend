@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { QuestionService} from '../providers/question/question.service';
 import {AppComponent} from '../app.component'
-import { environment } from './../../environments/environment';
+import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { RatingPage } from '../modals/rating/rating.page';
 import { ModalController, AlertController } from '@ionic/angular';
+import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import adviseCenterInfo from '../../assets/json/info.json';
 
 class Rating {
   question: String; 
@@ -14,55 +16,67 @@ class Rating {
 }
 
 @Component({
-  selector: 'app-folder',
-  templateUrl: './folder.page.html',
-  styleUrls: ['./folder.page.scss'],
+  selector: 'app-beratungsstelle',
+  templateUrl: './beratungsstelle.page.html',
+  styleUrls: ['./beratungsstelle.page.scss'],
 })
-export class FolderPage implements OnInit {
+export class BeratungsstellePage implements OnInit {
+
+  ionicForm: FormGroup;
+
+  minScore:any = 0.5;
+
   public folder: string;
   question: string = '';
   sendedQuestion: string = '';
   result: any = [] ;
   input: boolean= false;
   buttonClicked: boolean= false;
-  emptyInput: boolean= false;
+  emptyInput: boolean= true;
   apiUrl = environment.apiUrl;
   language = this.app.language;
   rating = new Rating();
   rateDone: boolean = false;
+  showResults: boolean;
+  infos: any[] = adviseCenterInfo;
+  
   
 
   constructor(private activatedRoute: ActivatedRoute, private questionService: QuestionService, private app: AppComponent, 
-    public http: HttpClient, private modalCtrl: ModalController, private alertCtrl: AlertController) { }
+    public http: HttpClient, private modalCtrl: ModalController, private alertCtrl: AlertController, public formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.folder = this.app.appPages[0].title;
     this.buttonClicked = false;
   }
 
-  async insertQuestion(question){
+  async insertQuestion(question:string){
     if(question.length > 0){
       this.buttonClicked = true;
+      this.showResults = false;
       this.sendedQuestion = question;
       const response = await fetch(this.apiUrl+'/question?q="' + question +'"').then( response => {
-        //this.questions =  response.json();
         return response.json();
       } ).then( json => {
         let answer  = json;
-        //this.sortByScore(answer.answers);
         console.log(json);
         answer.answers[0].sort((a,b)=> b.score-a.score);
         this.result =  answer;
         console.log(json );
         console.log( "json", answer );
+        
+        this.result.answers[0].forEach(element => {
+          if(element.score >= 0.5)
+            this.showResults = true;
+        });
+
       });
       this.input = false;
       this.rateDone =false
     }
-    
   }
 
-  userInput(){
+  async userInput(){
     if(this.question.length > 0){
       this.input = true;
       this.emptyInput = false;
@@ -70,11 +84,11 @@ export class FolderPage implements OnInit {
       //   this.insertQuestion(this.question);
       // }, 2000);
 
-      this.insertQuestion(this.question);
+      //this.insertQuestion(this.question);
     }
     else{
       this.emptyInput = true;
-      this.input = true;
+      this.input = false;
       this.buttonClicked = false;
     }
   }
@@ -90,20 +104,6 @@ export class FolderPage implements OnInit {
   public sortByScore(array): void {
     array.sort((x, y) => + x.score - + y.score);
   }
-
-  // rateQuestion(question){
-
-   
-    
-  //   this.http.post(this.apiUrl + 'newRatings', {
-  //     question: question,
-  //     result: "111",
-  //     rating: "1"
-  //   })
-  //     .subscribe((response) => {
-  //     console.log(response);
-  //   });
-  // }
 
   async rateQuestion() {
     
@@ -124,7 +124,6 @@ export class FolderPage implements OnInit {
         headers.append("Access-Control-Allow-Origin", "*");
         headers.append("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         headers.append("Access-Control-Allow-Methods", 'GET, POST, PATCH, PUT, DELETE, OPTIONS');
-        //headers.append('Access-Control-Allow-Headers', 'application/json' );
         const requestOptions = new HttpResponse({ headers: headers });
 
         let i = 1 ;

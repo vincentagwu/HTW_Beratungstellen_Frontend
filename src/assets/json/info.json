@@ -1,0 +1,101 @@
+[
+    {
+        "id": "asta",
+        "name": "AStA",
+        "website": "https://www.asta-htw.de/",
+        "address": "htw saar\nAStA Büro\nHelga Arweiler\nRaum 10.1.13",
+        "opening_times": "Montag bis Donnerstag\n7:30 bis 15:00 Uhr\nFreitag \n7:30 bis 13:00 Uhr",
+        "phone": "+49(0)681/5867-104",
+        "email": "asta@htwsaar.de"
+    },
+    {
+        "id": "bim",
+        "name": "Beschwerde- und Ideen-Management (BIM)",
+        "website": "https://www.htwsaar.de/studium-und-lehre/service-und-beratung/in-allen-lebenslagen/bim",
+        "address": "htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRaum 2217",
+        "opening_times": "Terminanfragen",
+        "phone": "+49(0)681/5867-324",
+        "email": "bim@htwsaar"
+    },
+    {
+        "id": "fachschaften",
+        "name": "Fachschaften",
+        "website": "https://www.htwsaar.de/hochschule/organisation/asta/copy2_of_index_2014.html",
+        "address": "",
+        "opening_times": "",
+        "phone": "",
+        "email": ""
+    },
+    {
+        "id": "familienbuero",
+        "name": "Familienbüro",
+        "website": "https://www.htwsaar.de/hochschule/profil/familiengerechte-hochschule",
+        "address": "htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRaum 8125 (Geb. 8)",
+        "opening_times": "Terminanfragen",
+        "phone": "+49(0)6815867-680\n+49(0)1605840388\n+49(0)6815867-463",
+        "email": "sandra.wiegand@htwsaar.de\nfamilie@htwsaar.de"
+    },
+    {
+        "id": "frauen_und_gleichstellung",
+        "name": "Frauen- und Gleichstellungsbüro",
+        "website": "https://www.htwsaar.de/gleichstellung",
+        "address": "htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRaum 2218\n\nhtw saar\nGoebenstraße 40\n66117 Saarbrücken\nRaum 8125 (Geb. 8)",
+        "opening_times": "Terminanfragen",
+        "phone": "+49(0)6815867-139\n+49(0)6815867-680\n+49(0)1605840388\n+49(0)6815867-463",
+        "email": "Irmgard.Koehler-Uhl@htwsaar.de\nsandra.wiegand@htwsaar.de\nfamilie@htwsaar.de"
+    },
+    {
+        "id": "international_office",
+        "name": "International Office",
+        "website": "Waren Sie mit den Vorschlägen zufrieden?",
+        "address": "",
+        "opening_times": "",
+        "phone": "",
+        "email": ""
+    },
+    {
+        "id": "lanadema",
+        "name": "Lange Nacht der Mathematik",
+        "website": "Waren Sie mit den Vorschlägen zufrieden?",
+        "address": "",
+        "opening_times": "",
+        "phone": "",
+        "email": ""
+    },
+    {
+        "id": "mathecafe",
+        "name": "Mathe- und Statistik-Cafés",
+        "website": "Waren Sie mit den Vorschlägen zufrieden?",
+        "address": "",
+        "opening_times": "",
+        "phone": "",
+        "email": ""
+    },
+    {
+        "id": "pruefungsamt",
+        "name": "Prüfungsamt",
+        "website": "https://www.htwsaar.de/studium-und-lehre/service-und-beratung/rund-ums-studium/pruefungsamt",
+        "address": "htw saar\nPrüfungsamt\nHaus des Wissens, Gebäude 11 (htw Hochhaus)\nRaum 11.01.01",
+        "opening_times": "Montag, Dienstag, Donnerstag, Freitag\n09.00-11.45 Uhr\nMittwoch\n13.30-16.00 Uhr",
+        "phone": "+49(0)681/5867-118",
+        "email": "pruefungsamt@htwsaar.de "
+    },
+    {
+        "id": "studienverlaufsberatung",
+        "name": "Studienverlaufsberatung",
+        "website": "https://www.htwsaar.de/studium-und-lehre/service-und-beratung/rund-ums-studium/studienverlaufsberatung",
+        "address": "htw saar\nHaus des Wissens\nGebäude 11\nMalstatter Straße 17\n66117 Saarbrücken\nRaum 11.02.13",
+        "opening_times": "Terminanfragen",
+        "phone": "+49(0)681/5867-99047",
+        "email": "albert.augustin@htwsaar.de"
+    },
+    {
+        "id": "studierendensekretariat",
+        "name": "Studierendensekretariat",
+        "website": "https://www.htwsaar.de/studium-und-lehre/service-und-beratung/rund-ums-studium/studierendensekretariat",
+        "address": "htw saar\nStudierendensekretariat\nHaus des Wissens, Gebäude 11 (htw Hochhaus)\nZimmer 11.01.19",
+        "opening_times": "Montags und Freitags geschlossen!!!\nDienstag, Donnerstag\n09.00-11.45 Uhr\nMittwoch\n13.30-16.00 Uhr\nTermine nach Vereinbarung",
+        "phone": "+49(0)681/5867-115",
+        "email": "stud-sek@htwsaar.de"
+    }
+]

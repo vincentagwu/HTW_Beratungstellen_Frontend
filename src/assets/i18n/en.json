@@ -7,6 +7,14 @@
         "title": "HTW-Saar advice centers",
         "question": "Enter your question",
         "answer": "Receive answer",
-        "rating": "Submit Rating"
+        "rating": "Submit Rating",
+        "website": "Website: ",
+        "contact": "Contact informationen",
+        "address": "Address: ",
+        "opening_times": "Opening times: ",
+        "phone": "Phone number: ",
+        "email": "E-Mail: ",
+        "score": "Score: ",
+        "not_found": "Entered question be a little more specific or relate more to the study!"
     }
 }

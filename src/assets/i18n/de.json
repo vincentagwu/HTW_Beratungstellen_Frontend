@@ -7,6 +7,15 @@
         "title": "HTW-Saar Beratungsstellen",
         "question": "Geben Sie Ihre Frage ein",
         "answer": "Antwort erhalten",
-        "rating": "Bewertung abgeben"
+        "rating": "Bewertung abgeben",
+        "website": "Webseite: ",
+        "adress": "HTW-Saar Beratungsstellen",
+        "contact": "Kontaktinformationen ",
+        "address": "Adresse: ",
+        "opening_times": "Öffnungszeiten: ",
+        "phone": "Telefonnummer: ",
+        "email": "E-Mail-Adresse: ",
+        "score": "Score: ",
+        "not_found": "Eingegebene Frage ein wenig spezifischer sein oder sich mehr aufs Studium beziehen!"
     }
 }
