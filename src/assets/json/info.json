@@ -2,100 +2,122 @@
     {
         "id": "asta",
         "name": "AStA",
-        "website": "https://www.asta-htw.de/",
-        "address": "htw saar\nAStA Büro\nHelga Arweiler\nRaum 10.1.13",
-        "opening_times": "Montag bis Donnerstag\n7:30 bis 15:00 Uhr\nFreitag \n7:30 bis 13:00 Uhr",
-        "phone": "+49(0)681/5867-104",
-        "email": "asta@htwsaar.de"
+        "website": ["https://www.asta-htw.de/"],
+        "address": ["htw saar\nAStA Büro\nHelga Arweiler\nRaum 10.1.13"],
+        "opening_times": ["Montag bis Donnerstag","7:30 bis 15:00 Uhr","Freitag","7:30 bis 13:00 Uhr"],
+        "phone": ["+49(0)681/5867-104"],
+        "email": ["asta@htwsaar.de"],
+        "contact": ""
     },
     {
         "id": "bim",
         "name": "Beschwerde- und Ideen-Management (BIM)",
-        "website": "https://www.htwsaar.de/studium-und-lehre/service-und-beratung/in-allen-lebenslagen/bim",
-        "address": "htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRaum 2217",
+        "website": ["https://www.htwsaar.de/studium-und-lehre/service-und-beratung/in-allen-lebenslagen/bim"],
+        "address": ["htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRaum 2217"],
         "opening_times": "Terminanfragen",
-        "phone": "+49(0)681/5867-324",
-        "email": "bim@htwsaar"
+        "phone": ["+49(0)681/5867-324"],
+        "email": ["isabelle.giro@htwsaar.de","bim@htwsaar"],
+        "contact": "Dipl.-Soz. Isabelle Giro"
     },
     {
         "id": "fachschaften",
         "name": "Fachschaften",
-        "website": "https://www.htwsaar.de/hochschule/organisation/asta/copy2_of_index_2014.html",
-        "address": "",
-        "opening_times": "",
-        "phone": "",
-        "email": ""
+        "website": ["https://www.htwsaar.de/hochschule/organisation/asta/copy2_of_index_2014.html", "http://stud-e.htw-saarland.de/", "http://stud-i.htw-saarland.de/", "http://stud-ma.htw-saarland.de/", "http://pflegeundgesundheit.xobor.de/", "https://www.htwsaar.de/wiwi/campusleben/fachschaft"],
+        "address": ["D-1-04 Campus Rotenbühl (Architektur)", "2214 Campus Alt-Saarbrücken (Elektrotechnik und Biomedizinische Technik)", "2212 Campus Alt-Saarbrücken (Informatik)", "7212/13 Campus Alt-Saarbrücken (Maschinenbau)", "11.05.07 Haus des Wissens Campus Alt-Saarbrücken (Pflege und Gesundheit)", "11.05.07 Haus des Wissens Campus Alt-Saarbrücken (Soziale Arbeit und Pädagogik der Kindheit)", "A-K-04 Campus Rotenbühl (Fachschaft Wirtschaftswissenschaften)"],
+        "opening_times": "Terminabfrage",
+        "phone": ["+49(0)6815867-495 (Bauingenieurwesen)", "+49(0)6815867-365 (Elektrotechnik und Biomedizinische Technik)", "+49(0)6815867-277 (Informatik)", "+49(0)6815867-105 (Maschinenbau)", "+49(0)6815867-580 (Fachschaft Wirtschaftswissenschaften)"],
+        "email": ["fsa@htwsaar.de (Architektur)", "fs-bi@htwsaar.de (Bauingenieurwesen)", "fs-e@htwsaar.de (Elektrotechnik und Biomedizinische Technik)", "fs-i@htwsaar.de (Informatik)", "fs-ma@htwsaar.de (Maschinenbau)", "fs-pug@htwsaar.de (Pflege und Gesundheit)", "fs-sp@htwsaar.de (Soziale Arbeit und Pädagogik der Kindheit)", "Fachschaft-wiwi@htwsaar.de (Fachschaft Wirtschaftswissenschaften)"],
+        "contact": ["Architektur", "Bauingenieurwesen", "Elektrotechnik und Biomedizinische Technik", "Informatik", "Maschinenbau", "Pflege und Gesundheit", "Soziale Arbeit und Pädagogik der Kindheit", "Fachschaft Wirtschaftswissenschaften"]
     },
     {
         "id": "familienbuero",
         "name": "Familienbüro",
-        "website": "https://www.htwsaar.de/hochschule/profil/familiengerechte-hochschule",
-        "address": "htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRaum 8125 (Geb. 8)",
+        "website": ["https://www.htwsaar.de/hochschule/profil/familiengerechte-hochschule"],
+        "address": ["htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRaum 8125 (Geb. 8)"],
         "opening_times": "Terminanfragen",
-        "phone": "+49(0)6815867-680\n+49(0)1605840388\n+49(0)6815867-463",
-        "email": "sandra.wiegand@htwsaar.de\nfamilie@htwsaar.de"
+        "phone": ["+49(0)6815867-680","+49(0)1605840388","+49(0)6815867-463"],
+        "email": ["sandra.wiegand@htwsaar.de","familie@htwsaar.de"],
+        "contact": "Sandra Wiegand, M.A."
     },
     {
         "id": "frauen_und_gleichstellung",
         "name": "Frauen- und Gleichstellungsbüro",
-        "website": "https://www.htwsaar.de/gleichstellung",
-        "address": "htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRaum 2218\n\nhtw saar\nGoebenstraße 40\n66117 Saarbrücken\nRaum 8125 (Geb. 8)",
+        "website": ["https://www.htwsaar.de/gleichstellung"],
+        "address": ["htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRaum 2218","htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRaum 8125 (Geb. 8)"],
         "opening_times": "Terminanfragen",
-        "phone": "+49(0)6815867-139\n+49(0)6815867-680\n+49(0)1605840388\n+49(0)6815867-463",
-        "email": "Irmgard.Koehler-Uhl@htwsaar.de\nsandra.wiegand@htwsaar.de\nfamilie@htwsaar.de"
+        "phone": ["+49(0)6815867-139","+49(0)6815867-680","+49(0)1605840388\n+49(0)6815867-463"],
+        "email": ["Irmgard.Koehler-Uhl@htwsaar.de","sandra.wiegand@htwsaar.de","familie@htwsaar.de"],
+        "contact": "Dipl.-Ing. Irmgard Köhler-Uhl\nSandra Wiegand, M.A"
     },
     {
         "id": "international_office",
         "name": "International Office",
-        "website": "Waren Sie mit den Vorschlägen zufrieden?",
-        "address": "",
+        "website": ["https://www.htwsaar.de/htw/int/io/team"],
+        "address": [""],
         "opening_times": "",
-        "phone": "",
-        "email": ""
+        "phone": ["+49(0)6815867-605","+49(0)6815867-99136","+49(0)6815867-654","+49(0)6815867-609","+49(0)6815867-99039","+49(0)6815867-606"],
+        "email": ["daniela.brossius@htwsaar.de","outgoing@htwsaar.de","norma.dettloff@htwsaar.de","study@htwsaar.de","marion.hergenroether@htwsaar.de","incoming@htwsaar.de","doris.kollmann@htwsaar.de","io@htwsaar.de","deji.olusanmi@htwsaar.de","coaching@htwsaar.de","andrea.roth-bastian@htwsaar.de","outgoing@htwsaar.de","incoming@htwsaar.de","io@htwsaar.de"],
+        "contact": ["Daniela Broßius (Austauschstudierende Outgoing)","Norma Dettloff (Internationale Regelstudierende)","Marion Hergenröther (Austauschstudierende Incoming)","Doris Kollmann (Leitung International Office)","Deji Olusamni (Internationale Regelstudierende)","Andrea Roth-Bastian (Erasmus+ Hochschulkoordinatorin)"]
     },
     {
         "id": "lanadema",
         "name": "Lange Nacht der Mathematik",
-        "website": "Waren Sie mit den Vorschlägen zufrieden?",
-        "address": "",
+        "website": ["Noch auszubauen!"],
+        "address": [""],
         "opening_times": "",
         "phone": "",
-        "email": ""
+        "email": "",
+        "contact": ""
     },
     {
         "id": "mathecafe",
         "name": "Mathe- und Statistik-Cafés",
-        "website": "Waren Sie mit den Vorschlägen zufrieden?",
-        "address": "",
+        "website": ["Noch auszubauen!"],
+        "address": [""],
         "opening_times": "",
         "phone": "",
-        "email": ""
+        "email": "",
+        "contact": ""
     },
     {
         "id": "pruefungsamt",
         "name": "Prüfungsamt",
-        "website": "https://www.htwsaar.de/studium-und-lehre/service-und-beratung/rund-ums-studium/pruefungsamt",
-        "address": "htw saar\nPrüfungsamt\nHaus des Wissens, Gebäude 11 (htw Hochhaus)\nRaum 11.01.01",
-        "opening_times": "Montag, Dienstag, Donnerstag, Freitag\n09.00-11.45 Uhr\nMittwoch\n13.30-16.00 Uhr",
-        "phone": "+49(0)681/5867-118",
-        "email": "pruefungsamt@htwsaar.de "
+        "website": ["https://www.htwsaar.de/studium-und-lehre/service-und-beratung/rund-ums-studium/pruefungsamt"],
+        "address": ["htw saar\nPrüfungsamt\nHaus des Wissens, Gebäude 11 (htw Hochhaus)\nRaum 11.01.01"],
+        "opening_times": ["Montag, Dienstag, Donnerstag, Freitag","09.00-11.45 Uhr","Mittwoch","13.30-16.00 Uhr"],
+        "phone": ["+49(0)681/5867-118"],
+        "email": ["pruefungsamt@htwsaar.de"],
+        "contact": ""
     },
     {
         "id": "studienverlaufsberatung",
         "name": "Studienverlaufsberatung",
         "website": "https://www.htwsaar.de/studium-und-lehre/service-und-beratung/rund-ums-studium/studienverlaufsberatung",
-        "address": "htw saar\nHaus des Wissens\nGebäude 11\nMalstatter Straße 17\n66117 Saarbrücken\nRaum 11.02.13",
+        "address": ["htw saar\nHaus des Wissens\nGebäude 11\nMalstatter Straße 17\n66117 Saarbrücken\nRaum 11.02.13"],
         "opening_times": "Terminanfragen",
-        "phone": "+49(0)681/5867-99047",
-        "email": "albert.augustin@htwsaar.de"
+        "phone": ["+49(0)681/5867-99047"],
+        "email": ["albert.augustin@htwsaar.de"],
+        "contact": ""
     },
     {
         "id": "studierendensekretariat",
         "name": "Studierendensekretariat",
         "website": "https://www.htwsaar.de/studium-und-lehre/service-und-beratung/rund-ums-studium/studierendensekretariat",
-        "address": "htw saar\nStudierendensekretariat\nHaus des Wissens, Gebäude 11 (htw Hochhaus)\nZimmer 11.01.19",
-        "opening_times": "Montags und Freitags geschlossen!!!\nDienstag, Donnerstag\n09.00-11.45 Uhr\nMittwoch\n13.30-16.00 Uhr\nTermine nach Vereinbarung",
-        "phone": "+49(0)681/5867-115",
-        "email": "stud-sek@htwsaar.de"
+        "address": ["htw saar\nStudierendensekretariat\nHaus des Wissens, Gebäude 11 (htw Hochhaus)\nZimmer 11.01.19"],
+        "opening_times": ["Montags und Freitags geschlossen!!!","Dienstag, Donnerstag","09.00-11.45 Uhr","Mittwoch","13.30-16.00 Uhr","Termine nach Vereinbarung"],
+        "phone": ["+49(0)681/5867-115"],
+        "email": ["stud-sek@htwsaar.de"],
+        "contact": "Dipl.-Soz. Isabelle Giro"
+    },
+    {
+        "id": "studieren_mit_behinderung",
+        "name": "Studieren mit gesundheitlicher Beeinträchtigung",
+        "website": "https://www.htwsaar.de/studium-und-lehre/service-und-beratung/in-allen-lebenslagen/studieren-mit-behinderung",
+        "address": ["htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRaum 2217"],
+        "opening_times": "Terminanfragen",
+        "phone": ["+49(0)681/5867-324"],
+        "email": ["isabelle.giro@htwsaar.de","bim@htwsaar"],
+        "contact": "Dipl.-Soz. Isabelle Giro"
     }
+
 ]

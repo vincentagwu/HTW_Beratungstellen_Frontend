@@ -63,13 +63,13 @@
                           <ion-item>
                             <ion-icon name="globe" slot="start"></ion-icon>
                             <ion-label position="stacked"> {{ 'folder.website' | translate }}</ion-label>
-                            <ion-input ><a href="{{info.website}}" target="_system">{{info.website}}</a></ion-input> 
+                            <ion-input *ngFor="let website of info.website"><a href="{{website}}" target="_system">{{website}}</a></ion-input> 
                           </ion-item>
                              
                           <ion-item>
                             <ion-icon name="map" slot="start"></ion-icon>
                             <ion-label position="stacked"> {{ 'folder.address' | translate }}</ion-label>
-                            <ion-input disabled>{{info.address}}</ion-input>
+                            <ion-input *ngFor="let address of info.address" disabled>{{address}}</ion-input>
                           </ion-item>
 
                           <ion-item>
@@ -78,16 +78,16 @@
                             <ion-input disabled>{{info.opening_times}}</ion-input>
                           </ion-item>
                               
-                          <ion-item>
+                          <ion-item text-wrap>
                             <ion-icon name="call" slot="start"></ion-icon>
                             <ion-label position="stacked"> {{ 'folder.phone' | translate }}</ion-label>
-                            <ion-input disabled>{{info.phone}}</ion-input>
+                            <ion-input disabled *ngFor="let phone of info.phone">{{phone}}</ion-input>
                           </ion-item>
 
                           <ion-item>
                             <ion-icon name="mail" slot="start"></ion-icon>
                             <ion-label position="stacked">  {{ 'folder.email' | translate }}</ion-label>
-                            <ion-input ><a href="mailto:'{{info.email}}">{{info.email}}</a></ion-input>
+                            <ion-input *ngFor="let email of info.email"><a href="mailto:'{{email}}">{{email}}</a></ion-input>
                           </ion-item>
 
                           <ion-item>
