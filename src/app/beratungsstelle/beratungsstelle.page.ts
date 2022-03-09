@@ -102,7 +102,8 @@ export class BeratungsstellePage implements OnInit {
 
 
   public sortByScore(array): void {
-    array.sort((x, y) => + x.score - + y.score);
+
+    array.sort(function(x, y) { + x.score - + y.score});
   }
 
   async rateQuestion() {
