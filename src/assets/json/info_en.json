@@ -1,0 +1,123 @@
+[
+    {
+        "id": "asta",
+        "name": "AStA",
+        "website": ["https://www.asta-htw.de/"],
+        "address": ["htw saar\nAStA Büro\nHelga Arweiler\nRoom 10.1.13"],
+        "opening_times": ["Monday till Thursday","7:30 till 15:00 o'clock","Friday","7:30 till 13:00 o'clock"],
+        "phone": ["+49(0)681/5867-104"],
+        "email": ["asta@htwsaar.de"],
+        "contact": ""
+    },
+    {
+        "id": "bim",
+        "name": "Complaint and Ideas Management (BIM)",
+        "website": ["https://www.htwsaar.de/studium-und-lehre/service-und-beratung/in-allen-lebenslagen/bim"],
+        "address": ["htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRoom 2217"],
+        "opening_times": "Appointment requests",
+        "phone": ["+49(0)681/5867-324"],
+        "email": ["isabelle.giro@htwsaar.de","bim@htwsaar"],
+        "contact": "Dipl.-Soz. Isabelle Giro"
+    },
+    {
+        "id": "fachschaften",
+        "name": "Professional Associations",
+        "website": ["https://www.htwsaar.de/hochschule/organisation/asta/copy2_of_index_2014.html", "http://stud-e.htw-saarland.de/", "http://stud-i.htw-saarland.de/", "http://stud-ma.htw-saarland.de/", "http://pflegeundgesundheit.xobor.de/", "https://www.htwsaar.de/wiwi/campusleben/fachschaft"],
+        "address": ["D-1-04 Campus Rotenbühl (Architecture)", "2214 Campus Alt-Saarbrücken (Electrical and Biomedical Engineering)", "2212 Campus Alt-Saarbrücken (Computer Science)", "7212/13 Campus Alt-Saarbrücken (Mechanical Engineering)", "11.05.07 Haus des Wissens Campus Alt-Saarbrücken (Care and health)", "11.05.07 Haus des Wissens Campus Alt-Saarbrücken (Social work and pedagogy of childhood)", "A-K-04 Campus Rotenbühl (Economics Student Council)"],
+        "opening_times": "Terminabfrage",
+        "phone": ["+49(0)6815867-495 (Civil Engineering)", "+49(0)6815867-365 (Electrical and Biomedical Engineering)", "+49(0)6815867-277 (Computer Science)", "+49(0)6815867-105 (Mechanical Engineering)", "+49(0)6815867-580 (Economics Student Council)"],
+        "email": ["fsa@htwsaar.de (Architecture)", "fs-bi@htwsaar.de (Civil Engineering)", "fs-e@htwsaar.de (Electrical and Biomedical Engineering)", "fs-i@htwsaar.de (Computer Science)", "fs-ma@htwsaar.de (Mechanical Engineering)", "fs-pug@htwsaar.de (Care and health)", "fs-sp@htwsaar.de (Social work and pedagogy of childhood)", "Fachschaft-wiwi@htwsaar.de (Economics Student Council)"],
+        "contact": ["Architecture", "Civil Engineering", "Electrical and Biomedical Engineering", "Computer Science", "Mechanical Engineering", "Care and health", "Social work and pedagogy of childhood", "Economics Student Council"]
+    },
+    {
+        "id": "familienbuero",
+        "name": "Family Office",
+        "website": ["https://www.htwsaar.de/hochschule/profil/familiengerechte-hochschule"],
+        "address": ["htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRoom 8125 (Geb. 8)"],
+        "opening_times": "Appointment requests",
+        "phone": ["+49(0)6815867-680","+49(0)1605840388","+49(0)6815867-463"],
+        "email": ["sandra.wiegand@htwsaar.de","familie@htwsaar.de"],
+        "contact": "Sandra Wiegand, M.A."
+    },
+    {
+        "id": "frauen_und_gleichstellung",
+        "name": "Women's and Equal Opportunity Office",
+        "website": ["https://www.htwsaar.de/gleichstellung"],
+        "address": ["htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRoom 2218","htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRoom 8125 (Geb. 8)"],
+        "opening_times": "Appointment requests",
+        "phone": ["+49(0)6815867-139","+49(0)6815867-680","+49(0)1605840388\n+49(0)6815867-463"],
+        "email": ["Irmgard.Koehler-Uhl@htwsaar.de","sandra.wiegand@htwsaar.de","familie@htwsaar.de"],
+        "contact": "Dipl.-Ing. Irmgard Köhler-Uhl\nSandra Wiegand, M.A"
+    },
+    {
+        "id": "international_office",
+        "name": "International Office",
+        "website": ["https://www.htwsaar.de/htw/int/io/team"],
+        "address": [""],
+        "opening_times": "",
+        "phone": ["+49(0)6815867-605","+49(0)6815867-99136","+49(0)6815867-654","+49(0)6815867-609","+49(0)6815867-99039","+49(0)6815867-606"],
+        "email": ["daniela.brossius@htwsaar.de","outgoing@htwsaar.de","norma.dettloff@htwsaar.de","study@htwsaar.de","marion.hergenroether@htwsaar.de","incoming@htwsaar.de","doris.kollmann@htwsaar.de","io@htwsaar.de","deji.olusanmi@htwsaar.de","coaching@htwsaar.de","andrea.roth-bastian@htwsaar.de","outgoing@htwsaar.de","incoming@htwsaar.de","io@htwsaar.de"],
+        "contact": ["Daniela Broßius (Exchange students outgoing)","Norma Dettloff (International regular students)","Marion Hergenröther (Exchange students Incoming)","Doris Kollmann (Head of International Office)","Deji Olusamni (International regular students)","Andrea Roth-Bastian (Erasmus+ University Coordinator)"]
+    },
+    {
+        "id": "lanadema",
+        "name": "Long night of mathematics",
+        "website": ["Still to be developed!"],
+        "address": [""],
+        "opening_times": "",
+        "phone": "",
+        "email": "",
+        "contact": ""
+    },
+    {
+        "id": "mathecafe",
+        "name": "Math and Statistics Cafés",
+        "website": ["Still to be developed!"],
+        "address": [""],
+        "opening_times": "",
+        "phone": "",
+        "email": "",
+        "contact": ""
+    },
+    {
+        "id": "pruefungsamt",
+        "name": "Examination Office",
+        "website": ["https://www.htwsaar.de/studium-und-lehre/service-und-beratung/rund-ums-studium/pruefungsamt"],
+        "address": ["htw saar\nPrüfungsamt\nHaus des Wissens, Gebäude 11 (htw Hochhaus)\nRoom 11.01.01"],
+        "opening_times": ["Monday, Tuesday, Thursday, Friday","09.00-11.45 o'clock","Wednesday","13.30-16.00 o'clock"],
+        "phone": ["+49(0)681/5867-118"],
+        "email": ["pruefungsamt@htwsaar.de"],
+        "contact": ""
+    },
+    {
+        "id": "studienverlaufsberatung",
+        "name": "Course of Study Advising",
+        "website": "https://www.htwsaar.de/studium-und-lehre/service-und-beratung/rund-ums-studium/studienverlaufsberatung",
+        "address": ["htw saar\nHaus des Wissens\nGebäude 11\nMalstatter Straße 17\n66117 Saarbrücken\nRoom 11.02.13"],
+        "opening_times": "Appointment requests",
+        "phone": ["+49(0)681/5867-99047"],
+        "email": ["albert.augustin@htwsaar.de"],
+        "contact": ""
+    },
+    {
+        "id": "studierendensekretariat",
+        "name": "Office of Student Affairs",
+        "website": "https://www.htwsaar.de/studium-und-lehre/service-und-beratung/rund-ums-studium/studierendensekretariat",
+        "address": ["htw saar\nStudierendensekretariat\nHaus des Wissens, Gebäude 11 (htw Hochhaus)\nZimmer 11.01.19"],
+        "opening_times": ["Mondays and Fridays closed!!!","Tuesday, Thursday","09.00-11.45 o'clock","Wednesday","13.30-16.00 o'clock","Termine nach Vereinbarung"],
+        "phone": ["+49(0)681/5867-115"],
+        "email": ["stud-sek@htwsaar.de"],
+        "contact": "Dipl.-Soz. Isabelle Giro"
+    },
+    {
+        "id": "studieren_mit_behinderung",
+        "name": "Studying with a health impairment",
+        "website": "https://www.htwsaar.de/studium-und-lehre/service-und-beratung/in-allen-lebenslagen/studieren-mit-behinderung",
+        "address": ["htw saar\nGoebenstraße 40\n66117 Saarbrücken\nRoom 2217"],
+        "opening_times": "Appointment requests",
+        "phone": ["+49(0)681/5867-324"],
+        "email": ["isabelle.giro@htwsaar.de","bim@htwsaar"],
+        "contact": "Dipl.-Soz. Isabelle Giro"
+    }
+
+]

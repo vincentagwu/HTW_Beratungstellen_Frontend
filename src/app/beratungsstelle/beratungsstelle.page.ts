@@ -7,7 +7,8 @@ import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { RatingPage } from '../modals/rating/rating.page';
 import { ModalController, AlertController } from '@ionic/angular';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-import adviseCenterInfo from '../../assets/json/info.json';
+import adviseCenterInfo_de from '../../assets/json/info_de.json';
+import adviseCenterInfo_en from '../../assets/json/info_en.json';
 
 class Rating {
   question: String; 
@@ -38,8 +39,8 @@ export class BeratungsstellePage implements OnInit {
   rating = new Rating();
   rateDone: boolean = false;
   showResults: boolean;
-  infos: any[] = adviseCenterInfo;
-  
+  infos_de: any[] = adviseCenterInfo_de;
+  infos_en: any[] = adviseCenterInfo_en;
   
 
   constructor(private activatedRoute: ActivatedRoute, private questionService: QuestionService, private app: AppComponent, 
@@ -103,7 +104,7 @@ export class BeratungsstellePage implements OnInit {
 
   public sortByScore(array): void {
 
-    array.sort(function(x, y) { + x.score - + y.score});
+    array.sort(function(x, y) {  x.score - + y.score});
   }
 
   async rateQuestion() {
