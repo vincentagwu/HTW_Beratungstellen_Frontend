@@ -81,11 +81,6 @@ export class BeratungsstellePage implements OnInit {
     if(this.question.length > 0){
       this.input = true;
       this.emptyInput = false;
-      // setTimeout(()=>{
-      //   this.insertQuestion(this.question);
-      // }, 2000);
-
-      //this.insertQuestion(this.question);
     }
     else{
       this.emptyInput = true;
