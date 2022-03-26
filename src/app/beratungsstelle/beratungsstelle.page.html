@@ -28,7 +28,7 @@
       <ion-col class="ion-text-center">
         <ion-item fill="outline">
           <ion-label position="floating">{{ 'folder.question' | translate }}</ion-label>
-          <ion-input type="text" [(ngModel)]="question" (ionChange)="userInput()"></ion-input>
+          <ion-input type="text" [(ngModel)]="question" (ionChange)="userInput()"  (keyup.enter)="insertQuestion(question)"></ion-input>
         </ion-item>
         </ion-col>
     </ion-row>
