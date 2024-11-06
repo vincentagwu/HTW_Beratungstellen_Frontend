@@ -43,17 +43,25 @@
           <ion-img src="/assets/svg/questions.svg" style="width: 400px; height: 400px;"></ion-img>
           <ion-label style="font-size:15px; color: gray;" position="floating">{{ 'folder.not_found' | translate }}</ion-label>
         </div>
+        <div *ngIf="showResults">
+          <div *ngIf="matchFound; else noMatch">
+            <p>Übereinstimmung gefunden</p>
+          </div>
+          <ng-template #noMatch>
+            <p>Keine Übereinstimmung gefunden</p>
+          </ng-template>
+        </div>
         <div *ngIf="input == false && this.question.length > 0 && showResults == true">
-          <div *ngFor="let answer of result.answers">
-            <div *ngFor="let item of answer">
-              <div *ngIf="item.score >= minScore">
+          <div >
+            <div >
+              <div >
                 <ion-list slot="content">
                   <div *ngIf="language == 'de'" >
-                    <div *ngFor="let info of infos_de">
-                      <ion-card *ngIf="item.label == info.id">
+                    <div >
+                      <ion-card >
                         <ion-card-header>
-                          <ion-card-title *ngIf="item.label == info.id">
-                            <ion-label>{{info.name}}</ion-label>
+                          <ion-card-title>
+                            <ion-label>{{adviceCentreElement.name}}</ion-label>
                           </ion-card-title>
                           <ion-card-subtitle>
                             <ion-label>{{ 'folder.contact' | translate }}</ion-label>
@@ -64,37 +72,37 @@
                             <ion-item>
                               <ion-icon name="globe" slot="start"></ion-icon>
                               <ion-label position="stacked"> {{ 'folder.website' | translate }}</ion-label>
-                              <ion-input *ngFor="let website of info.website"><a href="{{website}}" target="_system">{{website}}</a></ion-input> 
+                              <ion-input ><a href="{{adviceCentreElement.website}}" target="_system">{{adviceCentreElement.website}}</a></ion-input> 
                             </ion-item>
                               
                             <ion-item>
                               <ion-icon name="map" slot="start"></ion-icon>
                               <ion-label position="stacked"> {{ 'folder.address' | translate }}</ion-label>
-                              <ion-input *ngFor="let address of info.address" disabled>{{address}}</ion-input>
+                              <ion-input disabled>{{adviceCentreElement.address}}</ion-input>
                             </ion-item>
 
                             <ion-item>
                               <ion-icon name="time" slot="start"></ion-icon>
                               <ion-label position="stacked"> {{ 'folder.opening_times' | translate }}</ion-label>
-                              <ion-input disabled>{{info.opening_times}}</ion-input>
+                              <ion-input disabled>{{adviceCentreElement.opening_times}}</ion-input>
                             </ion-item>
                                 
                             <ion-item text-wrap>
                               <ion-icon name="call" slot="start"></ion-icon>
                               <ion-label position="stacked"> {{ 'folder.phone' | translate }}</ion-label>
-                              <ion-input disabled *ngFor="let phone of info.phone">{{phone}}</ion-input>
+                              <ion-input disabled>{{adviceCentreElement.phone}}</ion-input>
                             </ion-item>
 
                             <ion-item>
                               <ion-icon name="mail" slot="start"></ion-icon>
                               <ion-label position="stacked">  {{ 'folder.email' | translate }}</ion-label>
-                              <ion-input *ngFor="let email of info.email"><a href="mailto:'{{email}}">{{email}}</a></ion-input>
+                              <ion-input><a href="mailto:'{{email}}">{{adviceCentreElement.email}}</a></ion-input>
                             </ion-item>
 
                             <ion-item>
                               <ion-icon name="information-circle" slot="start"></ion-icon>
                               <ion-label position="stacked"> {{ 'folder.score' | translate }}</ion-label>
-                              <ion-input disabled>{{item.score}}</ion-input>
+                              <ion-input disabled>{{adviceCentreElement.score}}</ion-input>
                             </ion-item>
                           </ion-list>
                         </ion-card-content>
@@ -102,11 +110,11 @@
                     </div>
                 </div>
                   <div *ngIf="language == 'en'">
-                    <div *ngFor="let info of infos_en">
-                      <ion-card *ngIf="item.label == info.id">
+                    <div >
+                      <ion-card >
                         <ion-card-header>
-                          <ion-card-title *ngIf="item.label == info.id">
-                            <ion-label>{{info.name}}</ion-label>
+                          <ion-card-title >
+                            <ion-label>{{adviceCentreElement.name}}</ion-label>
                           </ion-card-title>
                           <ion-card-subtitle>
                             <ion-label>{{ 'folder.contact' | translate }}</ion-label>
@@ -117,37 +125,37 @@
                             <ion-item>
                               <ion-icon name="globe" slot="start"></ion-icon>
                               <ion-label position="stacked"> {{ 'folder.website' | translate }}</ion-label>
-                              <ion-input *ngFor="let website of info.website"><a href="{{website}}" target="_system">{{website}}</a></ion-input> 
+                              <ion-input ><a href="{{adviceCentreElement.website}}" target="_system">{{adviceCentreElement.website}}</a></ion-input> 
                             </ion-item>
                               
                             <ion-item>
                               <ion-icon name="map" slot="start"></ion-icon>
                               <ion-label position="stacked"> {{ 'folder.address' | translate }}</ion-label>
-                              <ion-input *ngFor="let address of info.address" disabled>{{address}}</ion-input>
+                              <ion-input disabled>{{adviceCentreElement.address}}</ion-input>
                             </ion-item>
 
                             <ion-item>
                               <ion-icon name="time" slot="start"></ion-icon>
                               <ion-label position="stacked"> {{ 'folder.opening_times' | translate }}</ion-label>
-                              <ion-input disabled>{{info.opening_times}}</ion-input>
+                              <ion-input disabled>{{adviceCentreElement.opening_times}}</ion-input>
                             </ion-item>
                                 
                             <ion-item text-wrap>
                               <ion-icon name="call" slot="start"></ion-icon>
                               <ion-label position="stacked"> {{ 'folder.phone' | translate }}</ion-label>
-                              <ion-input disabled *ngFor="let phone of info.phone">{{phone}}</ion-input>
+                              <ion-input disabled >{{adviceCentreElement.phone}}</ion-input>
                             </ion-item>
 
                             <ion-item>
                               <ion-icon name="mail" slot="start"></ion-icon>
                               <ion-label position="stacked">  {{ 'folder.email' | translate }}</ion-label>
-                              <ion-input *ngFor="let email of info.email"><a href="mailto:'{{email}}">{{email}}</a></ion-input>
+                              <ion-input><a href="mailto:'{{adviceCentreElement.email}}">{{adviceCentreElement.email}}</a></ion-input>
                             </ion-item>
 
                             <ion-item>
                               <ion-icon name="information-circle" slot="start"></ion-icon>
                               <ion-label position="stacked"> {{ 'folder.score' | translate }}</ion-label>
-                              <ion-input disabled>{{item.score}}</ion-input>
+                              <ion-input disabled>{{iadviceCentreElementtem.score}}</ion-input>
                             </ion-item>
                           </ion-list>
                         </ion-card-content>

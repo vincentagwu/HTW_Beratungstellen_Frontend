@@ -30,7 +30,7 @@ export class BeratungsstellePage implements OnInit {
   public folder: string;
   question: string = '';
   sendedQuestion: string = '';
-  result: any = [] ;
+  result: number = -1 ;
   input: boolean= false;
   buttonClicked: boolean= false;
   emptyInput: boolean= true;
@@ -41,6 +41,8 @@ export class BeratungsstellePage implements OnInit {
   showResults: boolean;
   infos_de: any[] = adviseCenterInfo_de;
   infos_en: any[] = adviseCenterInfo_en;
+  matchFound: boolean = false;
+  adviceCentreElement: any;
   
 
   constructor(private activatedRoute: ActivatedRoute, private questionService: QuestionService, private app: AppComponent, 
@@ -61,15 +63,21 @@ export class BeratungsstellePage implements OnInit {
       } ).then( json => {
         let answer  = json;
         console.log(json);
-        answer.answers[0].sort((a,b)=> b.score-a.score);
-        this.result =  answer;
+        //answer.answers[0].sort((a,b)=> b.score-a.score);
+        this.result =  answer.answers;
         console.log(json );
-        console.log( "json", answer );
+        console.log( "json1", this.infos_de, answer.answers );
         
-        this.result.answers[0].forEach(element => {
-          if(element.score >= 0.5)
-            this.showResults = true;
+        
+        this.showResults = true;
+        this.infos_de.forEach((element, index) => {
+          
+          if(index === this.result){
+
+            this.adviceCentreElement = element;
+          }
         });
+        
 
       });
       this.input = false;
@@ -125,7 +133,7 @@ export class BeratungsstellePage implements OnInit {
 
         let i = 1 ;
         let output = "";
-        this.result.answers[0].forEach(element => {
+        this.result[0].forEach(element => {
           output += i + ": " +  element.label + ",\n"
           i++;
         });
@@ -135,7 +143,7 @@ export class BeratungsstellePage implements OnInit {
         this.rating = new Rating();
 
         this.rating.question =  this.question;
-        this.rating.result = this.result;
+        this.rating.result = this.result[0];
         this.rating.rating = result.data.rating;
 
 
